@@ -1,0 +1,9 @@
+{
+  "name": "frontend-workflow",
+  "version": "0.1.0",
+  "description": "Onboard any frontend repo (Flutter, Android, iOS, React Native, web) to a provider-neutral AI workflow: architecture, feature-owner squads, test policy, AGENTS.md",
+  "author": {
+    "name": "Dickjay"
+  },
+  "keywords": ["onboarding", "workflow", "flutter", "android", "squads", "agents-md"]
+}

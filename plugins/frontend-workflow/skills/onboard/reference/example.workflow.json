@@ -1,0 +1,92 @@
+{
+  "schemaVersion": 1,
+  "project": {
+    "name": "wallet-app",
+    "size": "team",
+    "platforms": [
+      { "id": "android", "root": ".", "primary": true },
+      { "id": "flutter", "root": "features/flutterbridge/module", "primary": false }
+    ]
+  },
+  "architecture": {
+    "style": "mvvm",
+    "stateManagement": ["rxjava", "coroutines"],
+    "di": ["koin"],
+    "notes": [
+      "Each feature is its own Gradle module under features/",
+      "Feature modules never depend on each other; shared code goes in core modules"
+    ]
+  },
+  "commands": {
+    "install": null,
+    "format": null,
+    "lint": "./gradlew lint",
+    "test": "./gradlew testDebugUnitTest",
+    "build": "./gradlew assembleDebug",
+    "run": null,
+    "gate": "./gradlew lint testDebugUnitTest",
+    "gateScope": "affected"
+  },
+  "testing": {
+    "unit": {
+      "policy": "every-change",
+      "tool": "junit4 + mockito",
+      "location": "src/test/",
+      "command": "./gradlew testDebugUnitTest",
+      "meaning": "JVM tests of ViewModels, use cases and repositories; no Android framework"
+    },
+    "integration": {
+      "policy": "optional",
+      "tool": null,
+      "location": null,
+      "command": null,
+      "meaning": "Instrumented or Robolectric tests of one screen with fakes"
+    },
+    "e2e": {
+      "policy": "none",
+      "tool": null,
+      "location": null,
+      "command": null,
+      "meaning": "Whole-app journeys on a device; no tool chosen yet"
+    }
+  },
+  "squads": [
+    {
+      "id": "wallet-squad",
+      "owns": ["features/wallet", "features/topup"],
+      "description": "Wallet balance, top-up and transaction history",
+      "tasks": ["balance screen", "top-up flow", "transaction list"]
+    },
+    {
+      "id": "core-squad",
+      "owns": ["core", "app"],
+      "description": "Shared core modules and the app shell",
+      "tasks": ["networking", "design components", "navigation"]
+    }
+  ],
+  "roles": {
+    "techLead": false,
+    "ba": false,
+    "qaLead": false,
+    "reviewers": ["architecture", "tests"]
+  },
+  "hardRules": [
+    "No new feature module may depend on another feature module",
+    "Secrets never go into source or build files"
+  ],
+  "git": {
+    "host": "gitlab",
+    "baseBranch": "develop",
+    "branching": "gitflow",
+    "worktreePerTask": false,
+    "askBeforeCommit": true,
+    "askBeforePush": true
+  },
+  "providers": ["claude", "codex"],
+  "files": {
+    "rules": "AGENTS.md",
+    "ownership": ".agents/OWNERSHIP.md",
+    "agentsDir": ".claude/agents",
+    "skillsDir": null
+  }
+}
