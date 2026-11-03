@@ -1,4 +1,4 @@
-# frontend-workflow
+# abdul
 
 Set up a frontend repo's AI workflow by interview instead of copying another
 project's rules. Works for Flutter and native Android today; iOS, React Native and web
@@ -8,8 +8,8 @@ are detected but have no pre-filled options yet.
 
 | Skill | What it does |
 |---|---|
-| `/frontend-workflow:onboard` | Detects the stack, interviews the team (architecture, squads, unit/integration/e2e policy, git, AI tools) and writes `AGENTS.md`, `.agents/workflow.json` and per-tool files |
-| `/frontend-workflow:add-squad` | Adds a feature-owner squad after onboarding |
+| `/abdul:onboard` | Detects the stack, interviews the team (architecture, squads, unit/integration/e2e policy, git, AI tools) and writes `AGENTS.md`, `.agents/workflow.json` and per-tool files |
+| `/abdul:add-squad` | Adds a feature-owner squad after onboarding |
 
 Both accept `dry-run`: everything up to the file plan, nothing written. Both are
 user-invoked only (`disable-model-invocation`), so they add nothing to the context of

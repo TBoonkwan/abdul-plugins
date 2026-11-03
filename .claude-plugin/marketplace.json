@@ -1,14 +1,17 @@
 {
-  "name": "dickjay-plugins",
+  "name": "abdul-plugins",
   "description": "Team workflow plugins for frontend and mobile projects",
   "owner": {
     "name": "Dickjay"
   },
   "plugins": [
     {
-      "name": "frontend-workflow",
-      "source": "./plugins/frontend-workflow",
+      "name": "abdul",
+      "source": "./plugins/abdul",
       "description": "Onboard a frontend repo to a provider-neutral AI workflow: architecture, squads, test policy, AGENTS.md"
     }
-  ]
+  ],
+  "renames": {
+    "frontend-workflow": "abdul"
+  }
 }

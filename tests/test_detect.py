@@ -6,7 +6,7 @@ import tempfile
 import textwrap
 import unittest
 
-SCRIPTS = os.path.join(os.path.dirname(__file__), "..", "plugins", "frontend-workflow", "skills", "onboard", "scripts")
+SCRIPTS = os.path.join(os.path.dirname(__file__), "..", "plugins", "abdul", "skills", "onboard", "scripts")
 sys.path.insert(0, os.path.abspath(SCRIPTS))
 
 import detect  # noqa: E402

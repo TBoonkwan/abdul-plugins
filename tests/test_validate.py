@@ -6,7 +6,7 @@ import sys
 import tempfile
 import unittest
 
-ONBOARD = os.path.join(os.path.dirname(__file__), "..", "plugins", "frontend-workflow", "skills", "onboard")
+ONBOARD = os.path.join(os.path.dirname(__file__), "..", "plugins", "abdul", "skills", "onboard")
 SCRIPTS = os.path.join(ONBOARD, "scripts")
 sys.path.insert(0, os.path.abspath(SCRIPTS))
 

@@ -1,30 +1,30 @@
-# dickjay-plugins
+# abdul-plugins
 
 A Claude Code plugin marketplace.
 
 | Plugin | Version | What it does |
 |---|---|---|
-| [frontend-workflow](plugins/frontend-workflow/) | 0.1.0 | Onboard a frontend repo to a provider-neutral AI workflow |
+| [abdul](plugins/abdul/) | 0.1.0 | Onboard a frontend repo to a provider-neutral AI workflow |
 
 ## Install
 
 In a Claude Code session:
 
 ```
-/plugin marketplace add TBoonkwan/claude-plugins
-/plugin install frontend-workflow@dickjay-plugins
+/plugin marketplace add TBoonkwan/abdul-plugins
+/plugin install abdul@abdul-plugins
 ```
 
 Or from a shell:
 
 ```bash
-claude plugin marketplace add TBoonkwan/claude-plugins
-claude plugin install frontend-workflow@dickjay-plugins
+claude plugin marketplace add TBoonkwan/abdul-plugins
+claude plugin install abdul@abdul-plugins
 ```
 
-The name after `@` is the marketplace name (`dickjay-plugins`, from
+The name after `@` is the marketplace name (`abdul-plugins`, from
 `.claude-plugin/marketplace.json`), not the repo name. The repo is public, so no GitHub
-login is needed. Updates arrive with `/plugin marketplace update dickjay-plugins`, or
+login is needed. Updates arrive with `/plugin marketplace update abdul-plugins`, or
 automatically if you turn on auto-update for this marketplace in `/plugin` →
 Marketplaces.
 
@@ -36,20 +36,20 @@ extensions.
 In the repo you want to set up:
 
 ```
-/frontend-workflow:onboard dry-run     # detect + interview, writes nothing
-/frontend-workflow:onboard             # writes AGENTS.md, .agents/workflow.json, …
-/frontend-workflow:add-squad           # later: add a feature-owner squad
+/abdul:onboard dry-run     # detect + interview, writes nothing
+/abdul:onboard             # writes AGENTS.md, .agents/workflow.json, …
+/abdul:add-squad           # later: add a feature-owner squad
 ```
 
 Commit the generated files: teammates then get the workflow from the repo itself,
-without installing the plugin. See [the plugin README](plugins/frontend-workflow/) for
+without installing the plugin. See [the plugin README](plugins/abdul/) for
 modes, generated files and what v1 doesn't do yet.
 
 ## Try without installing
 
 ```bash
-git clone https://github.com/TBoonkwan/claude-plugins.git
-claude --plugin-dir ./claude-plugins/plugins/frontend-workflow
+git clone https://github.com/TBoonkwan/abdul-plugins.git
+claude --plugin-dir ./abdul-plugins/plugins/abdul
 ```
 
 ## Develop
